@@ -2,3 +2,6 @@ Python’s CVXOPT package to implement linearly nonseparable (soft margin) SVM i
 
 Compare the computational efficiency of the implementation of SVM with one in Python that employs the SMO approach. Present this comparison as a plot of the number of training samples versus execution time.   
 
+https://www.axelmendoza.com/posts/support-vector-machine-from-scratch-pytorch/
+
+https://pythonprogramming.net/soft-margin-kernel-cvxopt-svm-machine-learning-tutorial/
