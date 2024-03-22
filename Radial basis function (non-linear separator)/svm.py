@@ -10,7 +10,7 @@ def gaussian_kernel(x, y, sigma=1.75):
 
 class SVM(object):
 
-    def __init__(self, kernel=gaussian_kernel, C=10.0):
+    def __init__(self, kernel=gaussian_kernel, C=102.0):
         self.kernel = kernel
         self.C = C
 
@@ -112,12 +112,12 @@ if __name__ == '__main__':
             plt.legend(loc="lower left")
             plt.show()
 
-        def test_non_linear():
+        def rbf_svm(C):
             X1, y1, X2, y2 = get_data()
             X_train, y_train = split_train(X1, y1, X2, y2)
             X_test, y_test = split_test(X1, y1, X2, y2)
 
-            clf = SVM(gaussian_kernel)
+            clf = SVM(gaussian_kernel,C)
             clf.fit(X_train, y_train)
 
             y_predict = clf.predict(X_test)
@@ -129,5 +129,7 @@ if __name__ == '__main__':
             plot_contour(X_train[y_train==1], X_train[y_train==-1], clf)
             
 
-        test_non_linear()
+        # rbf_svm(100)
+        rbf_svm(10)
+    
         
